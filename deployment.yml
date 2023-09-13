@@ -1,0 +1,19 @@
+version: '3'
+network:
+        zyrafa-dev-net:
+                default: true
+                external: true
+
+services:
+        reverse-proxy:
+                image:
+                ports:
+                - "443:443"
+        pocketbase:
+                image:
+        landing:
+                image:
+        frontend:
+                image:
+        mobile:
+                image:
