@@ -1,4 +1,4 @@
-cert_key="local_cluster_mongodb.pem"
+cert_key="local_cluster_key.pem"
 cert_ca="local_cluster_ca.pem"
 
 openssl req -x509 \
