@@ -1,0 +1,9 @@
+version: '3'
+network:
+        zyrafa-dev-net:
+                default:
+                        external: true
+
+services:
+        frontend:
+                image: "fe-zyrafa-img:devop"
