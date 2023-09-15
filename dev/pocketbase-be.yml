@@ -1,0 +1,15 @@
+version: "3.7"
+
+volumes:
+  zyrafa-pocketbase-volume:
+
+services:
+  pocketbase-be:
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: pocketbase-be
+    restart: always
+    ports:
+      - "8090:8090"
+    volumes:
+      - zyrafa-pocketbase-volume:/pb_data
+        #      - /path/to/public:/pb_public #optional

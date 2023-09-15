@@ -4,20 +4,19 @@ network:
                 default:
                         external: true
 
+volumes:
+        zyrafa-pocketbase-volume:
+
 services:
         reverse-proxy:
                 image: "node-reverse-proxy:stable"
                 ports:
                 - "443:443"
-
-        pocketbase:
-                image:
-
-        landing:
-                image:
-
+        pocketbase-be:
+                image: ghcr.io/muchobien/pocketbase:latest
+                container_name: pocketbase-be
+                restart: always
+                volumes:
+                - zyrafa-pocketbase-volume:/pb_data
         frontend:
                 image: "fe-zyrafa-img:devop"
-
-        mobile:
-                image:
